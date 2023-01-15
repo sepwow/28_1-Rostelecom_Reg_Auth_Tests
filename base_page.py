@@ -17,3 +17,15 @@ class BasePage:
     def find_elements(self, locator, time=10):
         return WebDriverWait(self.driver, time).until(EC.presence_of_all_elements_located(locator),
                                                       message=f"Locator {locator} wasn't found")
+
+    def refresh(self):
+        return self.driver.refresh()
+
+    def text(self):
+        return self.driver.text()
+
+    def get_attribute(self):
+        return self.driver.get_attribute()
+
+    def click(self):
+        return self.driver.click()

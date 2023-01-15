@@ -12,7 +12,9 @@ class RegLocators:
     LOCATOR_REG_HEADER = (By.ID, "app-header")
     LOCATOR_REGISTRATION_TEXT = (By.XPATH, "//h1[contains(text(),'Регистрация')]")
     LOCATOR_FIRST_CODE_FIELD = (By.ID, "rt-code-0")
-
+    LOCATOR_ERROR_NAME = (By.XPATH, "//span[contains(text(),'Необходимо заполнить поле кириллицей. От 2 до 30 с')]")
+    LOCATOR_ERROR_PHONE = (By.XPATH, "//span[contains(text(),'Введите телефон в формате +7ХХХХХХХХХХ или +375XXX')]")
+    LOCATOR_ERROR_PASSWORD = (By.CLASS_NAME, "rt-input-container__meta--error")
 
 class RegInputHelper(BasePage):
     def reg_enter_name(self, name):
